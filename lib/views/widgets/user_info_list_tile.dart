@@ -1,3 +1,4 @@
+import 'package:dashboard_app/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -11,10 +12,16 @@ class UserInfoListTile extends StatelessWidget {
   final String title, subTitle, imageUrl;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: SvgPicture.asset(imageUrl),
-      title: Text(title),
-      subtitle: Text(subTitle),
+    return Card(
+      color: Color(0xffFAFAFA),
+      elevation: 0,
+      child: ListTile(
+        leading: SvgPicture.asset(imageUrl),
+        title: Text(title),
+        titleTextStyle: AppStyles.textSemiBold16,
+        subtitle: Text(subTitle),
+        subtitleTextStyle: AppStyles.textRegular12,
+      ),
     );
   }
 }
