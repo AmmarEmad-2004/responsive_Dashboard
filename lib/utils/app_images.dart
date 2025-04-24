@@ -40,7 +40,7 @@ class Assets {
 
   /// Assets for imagesMask group
   /// assets/images/Mask group.svg
-  static const String imagesMask group = "assets/images/Mask group.svg";
+  static const String imagesMaskgroup = "assets/images/Mask group.svg";
 
   /// Assets for imagesMoneys
   /// assets/images/moneys.svg
