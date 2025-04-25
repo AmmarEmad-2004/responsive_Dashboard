@@ -12,29 +12,39 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: Column(
-        children: [
-          UserInfoListTile(
-            title: 'Lekan Okeowo',
-            subTitle: 'demo@gmail.com',
-            imageUrl: AppImages.imagesAvatar3,
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              title: 'Lekan Okeowo',
+              subTitle: 'demo@gmail.com',
+              imageUrl: AppImages.imagesAvatar3,
+            ),
           ),
-          SizedBox(height: 8),
+          SliverToBoxAdapter(child: SizedBox(height: 8)),
           CustomDrawerItemsList(),
-          Spacer(),
-          InActiveDrawerItem(
-            item: DrawerItemModel(
-              title: 'Setting system',
-              imageUrl: AppImages.imagesSetting2,
+
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(child: SizedBox(height: 20)),
+                InActiveDrawerItem(
+                  item: DrawerItemModel(
+                    title: 'Setting system',
+                    imageUrl: AppImages.imagesSetting2,
+                  ),
+                ),
+                InActiveDrawerItem(
+                  item: DrawerItemModel(
+                    title: 'Logout account',
+                    imageUrl: AppImages.imagesLogout,
+                  ),
+                ),
+                SizedBox(height: 48),
+              ],
             ),
           ),
-          InActiveDrawerItem(
-            item: DrawerItemModel(
-              title: 'Logout account',
-              imageUrl: AppImages.imagesLogout,
-            ),
-          ),
-          SizedBox(height: 48),
         ],
       ),
     );
