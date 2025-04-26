@@ -25,19 +25,60 @@ class AllExpensesSection extends StatelessWidget {
               children: [
                 AllExpensesHeader(),
                 SizedBox(height: 16),
-                AllExpensesBodyItem(
-                  itemModel: AllExpensesModel(
-                    image: AppImages.imagesCardReceive,
-                    title: 'Income',
-                    date: 'April 2022',
-                    price: r'$20,129',
-                  ),
-                ),
+                AllExpensesBody(),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class AllExpensesBody extends StatelessWidget {
+  const AllExpensesBody({super.key});
+  static const List<AllExpensesModel> items = [
+    AllExpensesModel(
+      image: AppImages.imagesCardReceive,
+      title: 'Balance',
+      date: 'April 2022',
+      price: r'$20,129',
+    ),
+    AllExpensesModel(
+      image: AppImages.imagesCardReceive,
+      title: 'Income',
+      date: 'April 2022',
+      price: r'$20,129',
+    ),
+    AllExpensesModel(
+      image: AppImages.imagesCardSend,
+      title: 'Expense',
+      date: 'April 2022',
+      price: r'$5,129',
+    ),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      // children:
+      //     items
+      //         .map((e) => Expanded(child: AllExpensesBodyItem(itemModel: e)))
+      //         .toList(),
+      children:
+          items.asMap().entries.map((e) {
+            int index = e.key;
+            var item = e.value;
+            return Expanded(
+              child: Padding(
+                padding:
+                    index == 1
+                        ? const EdgeInsets.symmetric(horizontal: 12)
+                        : EdgeInsets.zero,
+                child: AllExpensesBodyItem(itemModel: item),
+              ),
+            );
+          }).toList(),
     );
   }
 }
