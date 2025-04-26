@@ -3,8 +3,8 @@ import 'package:dashboard_app/utils/app_styles.dart';
 import 'package:dashboard_app/views/widgets/all_expenses_body_header.dart';
 import 'package:flutter/material.dart';
 
-class AllExpensesBodyItem extends StatelessWidget {
-  const AllExpensesBodyItem({super.key, required this.itemModel});
+class InActiveAllExpensesBodyItem extends StatelessWidget {
+  const InActiveAllExpensesBodyItem({super.key, required this.itemModel});
   final AllExpensesModel itemModel;
   @override
   Widget build(BuildContext context) {
@@ -32,3 +32,5 @@ class AllExpensesBodyItem extends StatelessWidget {
     );
   }
 }
+
+
