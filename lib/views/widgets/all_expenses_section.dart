@@ -8,23 +8,18 @@ class AllExpensesSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 40),
-      child: Column(
-        children: [
-          CustomBackgroundContainer(
-            child: Column(
-              children: [
-                AllExpensesHeader(),
-                SizedBox(height: 16),
-                AllExpensesBody(),
-              ],
-            ),
+    return Column(
+      children: [
+        CustomBackgroundContainer(
+          child: Column(
+            children: [
+              AllExpensesHeader(),
+              SizedBox(height: 16),
+              AllExpensesBody(),
+            ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
-
-

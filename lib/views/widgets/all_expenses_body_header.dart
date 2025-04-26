@@ -16,6 +16,7 @@ class AllExpensesBodyHeader extends StatelessWidget {
       children: [
         AllExpensesBodyHeaderIcon(
           image: image,
+          
           color: color,
           backgroundColor: backgroundColor,
         ),
