@@ -14,7 +14,11 @@ class CustomCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color(0xff5fbef3),
           borderRadius: BorderRadius.circular(12),
-          image: DecorationImage(image: AssetImage(AppImages.imagesMaskgroup)),
+
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: AssetImage(AppImages.imagesMaskgroup),
+          ),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
