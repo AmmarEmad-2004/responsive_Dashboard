@@ -23,21 +23,18 @@ class CustomCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 31, top: 20, right: 24),
-              child: ListTile(
-                contentPadding: EdgeInsets.zero,
-                title: Text(
-                  'Name card',
-                  style: AppStyles.textRegular16.copyWith(color: Colors.white),
-                ),
-                subtitle: Text('Syah Bandi', style: AppStyles.textMedium20),
-                trailing: SvgPicture.asset(AppImages.imagesGallery),
+            ListTile(
+              contentPadding: EdgeInsets.only(left: 31, right: 42, top: 16),
+              title: Text(
+                'Name card',
+                style: AppStyles.textRegular16.copyWith(color: Colors.white),
               ),
+              subtitle: Text('Syah Bandi', style: AppStyles.textMedium20),
+              trailing: SvgPicture.asset(AppImages.imagesGallery),
             ),
             Spacer(),
             Padding(
-              padding: const EdgeInsets.only(right: 24, bottom: 27),
+              padding: const EdgeInsets.only(right: 24, bottom: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [

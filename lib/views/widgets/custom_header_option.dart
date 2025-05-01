@@ -1,8 +1,8 @@
 import 'package:dashboard_app/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
-class AllExpensesHeaderOption extends StatelessWidget {
-  const AllExpensesHeaderOption({super.key});
+class CustomHeaderOption extends StatelessWidget {
+  const CustomHeaderOption({super.key});
 
   @override
   Widget build(BuildContext context) {
