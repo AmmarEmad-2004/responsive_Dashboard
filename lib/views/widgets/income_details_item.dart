@@ -8,6 +8,7 @@ class IncomeDetailsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: EdgeInsets.zero,
       leading: Container(
         height: 12,
         width: 12,

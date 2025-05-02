@@ -12,7 +12,10 @@ class _IncomeChartState extends State<IncomeChart> {
   int activeIndex = -1;
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(aspectRatio: 1, child: PieChart(getPieChartData()));
+    return AspectRatio(
+      aspectRatio: 121 / 120,
+      child: PieChart(getPieChartData()),
+    );
   }
 
   PieChartData getPieChartData() {
@@ -28,27 +31,28 @@ class _IncomeChartState extends State<IncomeChart> {
       sectionsSpace: 0,
       sections: [
         PieChartSectionData(
-          radius: activeIndex == 0 ? 60 : 50,
-          value: 20,
-          color: Color(0xff064061),
-          showTitle: false,
-        ),
-        PieChartSectionData(
-          radius: activeIndex == 1 ? 60 : 50,
+          radius: activeIndex == 0 ? 45 : 35,
           value: 22,
           color: Color(0xffE2DECD),
           showTitle: false,
         ),
         PieChartSectionData(
-          radius: activeIndex == 2 ? 60 : 50,
-          value: 40,
-          color: Color(0xff208CC8),
+          radius: activeIndex == 1 ? 45 : 35,
+          value: 20,
+          color: Color(0xff064061),
+          showTitle: false,
+        ),
+
+        PieChartSectionData(
+          radius: activeIndex == 2 ? 45 : 35,
+          value: 25,
+          color: Color(0xff4EB7F2),
           showTitle: false,
         ),
         PieChartSectionData(
-          radius: activeIndex == 3 ? 60 : 50,
-          value: 25,
-          color: Color(0xff4EB7F2),
+          radius: activeIndex == 3 ? 45 : 35,
+          value: 40,
+          color: Color(0xff208CC8),
           showTitle: false,
         ),
       ],
