@@ -9,7 +9,8 @@ class IncomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Flexible(child: IncomeChart()),
+        Expanded(child: IncomeChart()),
+        SizedBox(width: 40),
 
         Expanded(child: IncomeDetails()),
       ],
