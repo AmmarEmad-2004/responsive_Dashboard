@@ -1,7 +1,5 @@
-import 'package:dashboard_app/views/widgets/allexpnese_and_quick_invoice_section.dart';
 import 'package:dashboard_app/views/widgets/custom_drawer.dart';
-import 'package:dashboard_app/views/widgets/income_section.dart';
-import 'package:dashboard_app/views/widgets/my_card_and_transaction_history_section.dart';
+import 'package:dashboard_app/views/widgets/mobile_layout.dart';
 import 'package:flutter/material.dart';
 
 class TabletLayout extends StatelessWidget {
@@ -15,23 +13,12 @@ class TabletLayout extends StatelessWidget {
         SizedBox(width: 32),
         Expanded(
           flex: 3,
-          child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.only(top: 40),
-              child: Column(
-                children: [
-                  AllExpensessAndQuickInvoiceSection(),
-                  SizedBox(height: 24),
-                  MyCardAndTransactionHistorySection(),
-                  SizedBox(height: 24),
-                  IncomeSection(),
-                ],
-              ),
-            ),
-          ),
+          child: MobileLayout(),
         ),
         SizedBox(width: 24),
       ],
     );
   }
 }
+
+

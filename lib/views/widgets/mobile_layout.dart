@@ -8,19 +8,20 @@ class MobileLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var width = MediaQuery.sizeOf(context).width;
+
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          Expanded(child: AllExpensessAndQuickInvoiceSection()),
-          SizedBox(height: 24),
-          Column(
-            children: [
-              MyCardAndTransactionHistorySection(),
-              SizedBox(height: 24),
-              Expanded(child: IncomeSection()),
-            ],
-          ),
-        ],
+      child: Padding(
+        padding: width > 800 ? const EdgeInsets.only(top: 40) : EdgeInsets.zero,
+        child: Column(
+          children: [
+            AllExpensessAndQuickInvoiceSection(),
+            SizedBox(height: 24),
+            MyCardAndTransactionHistorySection(),
+            SizedBox(height: 24),
+            IncomeSection(),
+          ],
+        ),
       ),
     );
   }
