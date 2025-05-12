@@ -11,7 +11,7 @@ class CustomTexFeild extends StatelessWidget {
         fillColor: Color(0xffFAFAFA),
         filled: true,
         hintText: hint,
-        hintStyle: AppStyles.textRegular16.copyWith(color: Color(0xffAAAAAA)),
+        hintStyle: AppStyles.textRegular16(context).copyWith(color: Color(0xffAAAAAA)),
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(),

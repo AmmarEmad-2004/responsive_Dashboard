@@ -16,7 +16,7 @@ class CustomHeaderOption extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text('Monthly', style: AppStyles.textRegular16),
+          Text('Monthly', style: AppStyles.textRegular16(context)),
           SizedBox(width: 18),
           Transform.rotate(
             angle: -1.57079633,

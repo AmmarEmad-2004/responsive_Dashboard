@@ -14,7 +14,7 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(item.imageUrl),
       title: Text(item.title),
-      titleTextStyle: AppStyles.textBold16,
+      titleTextStyle: AppStyles.textBold16(context),
       trailing: Container(
         width: 3.27,
         decoration: BoxDecoration(color: Color(0xff4EB7F2)),

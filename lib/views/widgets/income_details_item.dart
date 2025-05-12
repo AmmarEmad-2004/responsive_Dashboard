@@ -14,10 +14,10 @@ class IncomeDetailsItem extends StatelessWidget {
         width: 12,
         decoration: ShapeDecoration(color: item.color, shape: OvalBorder()),
       ),
-      title: Text(item.title, style: AppStyles.textRegular16),
+      title: Text(item.title, style: AppStyles.textRegular16(context)),
       trailing: Text(
         item.amount,
-        style: AppStyles.textMedium16.copyWith(color: Color(0xff208CC8)),
+        style: AppStyles.textMedium16(context).copyWith(color: Color(0xff208CC8)),
       ),
     );
   }

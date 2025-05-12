@@ -4,10 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile({
-    super.key, required this.user,
-    
-  });
+  const UserInfoListTile({super.key, required this.user});
   final UserInfoModel user;
   @override
   Widget build(BuildContext context) {
@@ -17,9 +14,9 @@ class UserInfoListTile extends StatelessWidget {
       child: ListTile(
         leading: SvgPicture.asset(user.imageUrl),
         title: Text(user.title),
-        titleTextStyle: AppStyles.textSemiBold16,
+        titleTextStyle: AppStyles.textSemiBold16(context),
         subtitle: Text(user.subTitle),
-        subtitleTextStyle: AppStyles.textRegular12,
+        subtitleTextStyle: AppStyles.textRegular12(context),
       ),
     );
   }

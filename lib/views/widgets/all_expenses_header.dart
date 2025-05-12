@@ -9,7 +9,7 @@ class AllExpensesHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('All Expenses', style: AppStyles.textSemiBold20),
+        Text('All Expenses', style: AppStyles.textSemiBold20(context)),
         Expanded(child: SizedBox()),
         CustomHeaderOption(),
       ],

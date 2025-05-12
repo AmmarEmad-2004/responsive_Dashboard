@@ -8,7 +8,7 @@ class QuickInvoiceHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text('Quick Invoice', style: AppStyles.textSemiBold20),
+        Text('Quick Invoice', style: AppStyles.textSemiBold20(context)),
         Spacer(),
         Container(
           height: 48,

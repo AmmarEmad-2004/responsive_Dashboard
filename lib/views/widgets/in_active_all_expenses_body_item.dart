@@ -22,11 +22,11 @@ class InActiveAllExpensesBodyItem extends StatelessWidget {
         children: [
           AllExpensesBodyHeader(image: itemModel.image),
           SizedBox(height: 34),
-          Text(itemModel.title, style: AppStyles.textSemiBold16),
+          Text(itemModel.title, style: AppStyles.textSemiBold16(context)),
           SizedBox(height: 8),
-          Text(itemModel.date, style: AppStyles.textRegular14),
+          Text(itemModel.date, style: AppStyles.textRegular14(context)),
           SizedBox(height: 16),
-          Text(itemModel.price, style: AppStyles.textSemiBold24),
+          Text(itemModel.price, style: AppStyles.textSemiBold24(context)),
         ],
       ),
     );

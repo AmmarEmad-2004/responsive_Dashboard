@@ -12,7 +12,7 @@ class TransactionHistoryBody extends StatelessWidget {
       children: [
         Text(
           '13 April 2022',
-          style: AppStyles.textMedium16.copyWith(color: Color(0xffAAAAAA)),
+          style: AppStyles.textMedium16(context).copyWith(color: Color(0xffAAAAAA)),
         ),
         SizedBox(height: 16),
         TransactionHistoryList(),

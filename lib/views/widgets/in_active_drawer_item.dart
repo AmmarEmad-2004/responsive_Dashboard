@@ -13,7 +13,7 @@ class InActiveDrawerItem extends StatelessWidget {
     return ListTile(
       leading: SvgPicture.asset(item.imageUrl),
       title: Text(item.title),
-      titleTextStyle: AppStyles.textRegular16,
+      titleTextStyle: AppStyles.textRegular16(context),
     );
   }
 }
